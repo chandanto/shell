@@ -9,8 +9,8 @@ chmod 740 /tmp/worker.sh
 
 cd /tmp; wget https://raw.githubusercontent.com/chandanto/ppk/master/chandan_public_key_pem; chmod 600 chandan_public_key_pem
 
-scp -o StrictHostKeyChecking=no -i  'chandan_public_key_pem' /tmp/worker.sh chandan@vm-2:/tmp
-scp -o StrictHostKeyChecking=no -i  'chandan_public_key_pem' /tmp/worker.sh chandan@vm-3:/tmp
+scp -o StrictHostKeyChecking=no -i  'chandan_public_key_pem' /tmp/worker.sh chandan@10.100.10.5:/tmp
+scp -o StrictHostKeyChecking=no -i  'chandan_public_key_pem' /tmp/worker.sh chandan@10.100.10.6:/tmp
 
 rm -rf /tmp/chandan_public_key_pem; rm -rf /tmp/worker.sh
 
