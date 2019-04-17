@@ -13,3 +13,9 @@ chmod 600 chandan_public_key_pem
 
 scp -o StrictHostKeyChecking=no -i  'chandan_public_key_pem' /tmp/worker.sh chandan@vm-2:/tmp
 scp -o StrictHostKeyChecking=no -i  'chandan_public_key_pem' /tmp/worker.sh chandan@vm-3:/tmp
+
+rm -rf /tmp/chandan_public_key_pem
+rm -rf /tmp/worker.sh
+
+
+
