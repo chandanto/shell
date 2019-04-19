@@ -7,7 +7,7 @@ docker swarm init
 docker swarm join-token worker  | grep -v command > /tmp/worker.sh
 chmod 740 /tmp/worker.sh
 
-cd /tmp; wget https://raw.githubusercontent.com/chandanto/ppk/master/chandan_public_key_pem?token=AG6AOY2YGZHBKT4C7JQ6ISK4XAQN2; chmod 600 chandan_public_key_pem
+cd /tmp; wget https://raw.githubusercontent.com/chandanto/ppk/master/chandan_public_key_pem; chmod 600 chandan_public_key_pem
 
 scp -o StrictHostKeyChecking=no -i  'chandan_public_key_pem' /tmp/worker.sh chandan@10.100.10.5:/tmp
 scp -o StrictHostKeyChecking=no -i  'chandan_public_key_pem' /tmp/worker.sh chandan@10.100.10.6:/tmp
